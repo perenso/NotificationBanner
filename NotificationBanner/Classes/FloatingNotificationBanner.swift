@@ -21,6 +21,15 @@ import SnapKit
 
 open class FloatingNotificationBanner: GrowingNotificationBanner {
     
+    public override var bannerHeight: CGFloat {
+        get {
+            return super.bannerHeight
+        }
+        set {
+            super.bannerHeight = newValue + spacerViewHeight()
+        }
+    }
+    
     public init(
         title: String? = nil,
         subtitle: String? = nil,
